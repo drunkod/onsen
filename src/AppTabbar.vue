@@ -10,13 +10,21 @@
     </custom-toolbar>
 
     <v-ons-tabbar position="bottom" modifier="autogrow white-content"
-    swipeable 
+    swipeable
       :on-swipe="md ? onSwipe : null"
       :tabbar-style="swipeTheme"
       :tabs="tabs"
       :index.sync="index"
       @postchange="showTip($event, 'Tip: Try swiping pages!')"
-    ></v-ons-tabbar>
+    >
+      <v-ons-tab icon="ion-map"></v-ons-tab>
+      <v-ons-tab :icon="md ? null : 'ion-home'"></v-ons-tab>
+      <v-ons-tab :icon="tabs[2].icon"></v-ons-tab>
+      <v-ons-tab icon="ion-navicon, material:md-menu"></v-ons-tab>
+      <v-ons-tab icon="ion-navicon, material:md-menu"></v-ons-tab>
+      <v-ons-tab icon="ion-navicon, material:md-menu"></v-ons-tab>
+
+  </v-ons-tabbar>
   </v-ons-page>
 </template>
 
@@ -44,16 +52,7 @@ export default {
       tabs: [
         {
           title: 'Camera',
-          label: 'Home',
-          icon: 'ion-navicon',
-          page: Camera,
-          theme: red,
-          style: { maxWidth: '50px' },
-          top: -100 // Toolbar + Tabbar heights
-        },
-        {
-          title: 'Camera',
-          label: 'Home',
+          label: 'Map',
           icon: 'ion-map',
           page: Camera,
           theme: red,

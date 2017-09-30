@@ -1,7 +1,7 @@
 <template>
   <v-ons-page>
     <v-ons-splitter>
-      <v-ons-splitter-side swipeable swipe-threshold="0.5" side="left" collapse=""
+      <v-ons-splitter-side id="menu" swipeable swipe-threshold="0.5" side="left" collapse=""
         width="260px"
         :swipe-target-width="md && 100"
         :animation="md ? 'overlay' : 'reveal'"

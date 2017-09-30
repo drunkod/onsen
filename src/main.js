@@ -34,3 +34,10 @@ new Vue({
 
   }
 });
+// Open tab splitter
+window.fn = {}
+fn.open = function () {
+  document.getElementById('menu').toggle();
+};
+
+document.querySelectorAll('ons-tab')[5].onClick = fn.open;
