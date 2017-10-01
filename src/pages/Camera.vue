@@ -5,10 +5,10 @@
   </div>
     </div>
     <div id="map" style="height: 100%;">
-    <v-map :zoom="zoom" :center="center">
-      <v-tilelayer :url="url" :attribution="attribution"></v-tilelayer>
+    <v-map :zoom="zoom" :center="center" :zoomControl=zoomControl>
+      <v-tilelayer :url="url" :attribution="attribution" :dragging=dragging></v-tilelayer>
       <v-marker :lat-lng="marker"></v-marker>
-      <v-marker :lat-lng="arker"></v-marker>
+      <v-marker :lat-lng="arker" :draggable=draggable></v-marker>
     </v-map>
     </div>
   </v-ons-page>
@@ -26,6 +26,9 @@ export default {
         attribution:'&copy; <a href="http://osm.org/copyright">dfgdgdfg dxvcd</a> contributors',
         marker: L.latLng(47.218938, -1.553772),
         arker: L.latLng(50.218938, -1.553772),
+        dragging: false,
+        draggable: true,
+        zoomControl: true,
       }
     }
 };
