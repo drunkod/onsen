@@ -5,7 +5,7 @@
   </div>
     </div>
     <div id="map" style="height: 100%;">
-    <v-map :zoom="zoom" :center="center" :dragging=dragging>
+    <v-map ref="map" :zoom="zoom" :center="center" :dragging=dragging>
       <v-tilelayer :url="url" :attribution="attribution"></v-tilelayer>
       <v-marker :lat-lng="marker"></v-marker>
       <v-marker :lat-lng="arker" :draggable=draggable></v-marker>
@@ -31,9 +31,9 @@ export default {
       }
     },
     mounted() {
-      //Block map dragging
-      L.Draggable._dragging = true;
-
+      //Block only map dragging
+      this.$refs.map.mapObject.dragging._map.dragging.disable();
+      //console.log(this);
     }
 };
 </script>
