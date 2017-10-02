@@ -33,7 +33,8 @@ export default {
     },
     mounted() {
       //Block only map dragging
-
+      // or, add to an existing map:
+      //map.addControl(new L.Control.Fullscreen());
       var this_map = this.$refs.map;
       this.$refs.map.mapObject.on('fullscreenchange', function () {
           if (this_map.mapObject.isFullscreen()) {
