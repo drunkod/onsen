@@ -33,8 +33,16 @@ export default {
     },
     mounted() {
       //Block only map dragging
-      //this.$refs.map.mapObject.dragging.disable();
 
+      var this_map = this.$refs.map;
+      this.$refs.map.mapObject.on('fullscreenchange', function () {
+          if (this_map.mapObject.isFullscreen()) {
+            this_map.mapObject.dragging.enable();
+              console.log('entered fullscreen');
+          } else {
+              console.log('exited fullscreen');
+          }
+      });
       //console.log(this)
     }
 };
