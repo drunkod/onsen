@@ -42,6 +42,7 @@ export default {
               console.log('entered fullscreen');
           } else {
               console.log('exited fullscreen');
+            this_map.mapObject.dragging.disable();
           }
       });
       //console.log(this)
