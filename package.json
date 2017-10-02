@@ -11,6 +11,7 @@
     "deploy": "npm run demo:index && ghpages -p dist"
   },
   "dependencies": {
+    "leaflet-fullscreen": "^1.0.2",
     "onsenui": "2.6.x",
     "vue": "^2.4.2",
     "vue-onsenui": "2.2.x",
