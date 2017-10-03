@@ -9,9 +9,9 @@ import Vue2Leaflet from 'vue2-leaflet';
 import leafletfullscreen from 'leaflet-fullscreen';
 //import leafletfullscreen from '../node_modules/leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 //import Vue2Leaflet from '../node_modules/vue2-leaflet/dist/vue2-leaflet.min.js';
-//import Leaflet from 'https://unpkg.com/leaflet@1.0.3/dist/leaflet.js';
+//import 'https://unpkg.com/leaflet@1.2.1/dist/leaflet.js';
 //import 'https://unpkg.com/leaflet@1.0.3/dist/leaflet.js';
-//import '../node_modules/leaflet/dist/leaflet.css'; // Onsen UI basic CSS
+//import '../node_modules/leaflet/dist/leaflet.js'; // Onsen UI basic CSS
 
 import 'onsenui/css/onsenui.css'; // Onsen UI basic CSS
 // import 'onsenui/css/onsen-css-components.css'; // Default Onsen UI CSS components

@@ -70,4 +70,8 @@ export default {
   width: 100px;
   z-index: 800;
 }
+/* Default icon URLs */
+.leaflet-default-icon-path img {
+	background-image: url(../../node_modules/vue2-leaflet/examples/src/assets/images/marker-icon.png);
+	}
 </style>
