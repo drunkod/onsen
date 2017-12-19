@@ -5,15 +5,19 @@
   "author": "Fran Dios <me@frandiox.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --disableHostCheck --compress --hot --host 0.0.0.0 --port 8080",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --disableHostCheck --compress --hot --host 0.0.0.0 --port 3030",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "demo:index": "mv dist/index.html dist/main.html && sed -i 's/index\\.html/main\\.html/' dist/demo.html && mv dist/demo.html dist/index.html",
     "deploy": "npm run demo:index && ghpages -p dist"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "jssha": "^2.3.1",
     "leaflet-fullscreen": "^1.0.2",
     "onsenui": "2.6.x",
     "vue": "^2.4.2",
+    "vue-fuse": "^1.2.1",
+    "vue-multiselect": "^2.0.6",
     "vue-onsenui": "2.2.x",
     "vue2-leaflet": "0.0.54",
     "vuex": "^2.4.0"
@@ -21,6 +25,7 @@
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6.0.0",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^3.0.0",

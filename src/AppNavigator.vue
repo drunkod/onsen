@@ -1,5 +1,5 @@
 <template>
-  <v-ons-navigator swipeable 
+  <v-ons-navigator swipeable
     :page-stack="pageStack"
     :pop-page="storePop"
     :options="options"
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+
 import AppSplitter from './AppSplitter.vue';
 
 export default {

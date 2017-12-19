@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Vue Onsen UI Kitchen Sink</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#edeaea">
+    <meta content="Велосипед - Каждый день | Челябинск" name="title">
+	<meta content="Велосипед - Каждый день | Карта велосипедного Челябинска. На карте вы можете найти компанию, велопрокат, маршруты, велопарковки, велоремонт, велоквест, велотуры, объявления - все для прогулки на велосипеде по городу Челябинску." name="description">
+    <meta content="места катания, Челябинск, велосипед, знакомства, покатушка, места катания на горном велосипеде, велопрогулка, велопрогулка, в Челябинске, велознакомства, велодвижение, велосипедист, найти компанию, на велосипеде, для катания, каждый день, прокат, ремонт, маршрут, прогулка, покататься, зима, лето, велотур, велоквест, куплю, продам, запчасти, вело, объявления" name="keywords">
+    <meta name="author" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Велосипед - Каждый день | Челябинск">
+	<meta content="Велосипед - Каждый день | Карта велосипедного Челябинска" property="og:title">
+   <meta property="og:image" content="https://pp.userapi.com/c628619/v628619409/40746/FlJUAyOdRww.jpg">
+    <meta property="og:description" content="Велосипед - Каждый день | карта велосипедного Челябинска. На карте вы можете найти компанию, велопрокат, маршруты, велопарковки, велоремонт, велоквест, велотуры, объявления - все для прогулки на велосипеде по городу Челябинску.">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+      <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#eab91f">
+      <meta name="apple-mobile-web-app-title" content="Велосипед - Каждый день">
+      <meta name="application-name" content="Велосипед - Каждый день">
+      <meta name="theme-color" content="#ffffff">
+      <link rel="manifest" href="/manifest.json">
+
+    <title>Велосипед - Каждый день | Челябинск</title>
   </head>
   <body>
     <div id="app"></div>
   </body>
+  <script>
+  _hcwp = window._hcwp || [];
+  _hcwp.push({
+  widget: "Stream",
+  widget_id: 92748,
+  hc_disable: 1,
+  xid: "chat_chelyabinsk",
+  append: "#chat_widget",
+  callback: function(app, init) {
+  app.on('siteAuth', function(packet) {
+    console.log('event site auth =' + packet);
+  });
+  app.on('streamMessage', function(packet) {
+    console.log('событие событие streamMessage =' + JSON.stringify(packet));
+  });
+  app.on('streamTopic', function(packet) {
+    console.log('event streamTopic =' + JSON.stringify(packet));
+  });
+  app.on('streamLike', function(packet) {
+    console.log('event streamLike =' + JSON.stringify(packet));
+  });
+  },
+  texts: {
+  "Comments" : "Сообщения",
+  "Add comment": "Отправить",
+  }
+  });
+  (function() {
+    HC_LOAD_INIT = true;
+    var startzoom = 10;
+    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+    var hcc = document.createElement("script");
+    hcc.type = "text/javascript";
+    hcc.async = true;
+    hcc.src = ("https:" == document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/92748/" + lang + "/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling);
+  })();
+  </script>
 </html>

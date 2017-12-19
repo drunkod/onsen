@@ -113,3 +113,24 @@ if (process.env.NODE_ENV === 'production') {
     })
   ]);
 }
+
+if (process.env.NODE_ENV === 'development') {
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"',
+        CITY: '"chelyabinsk"',
+          WS_HOST: '"map-nodered-env-8292438.mircloud.host"',
+          WS_PATH: '"/worldmap/socket.io"',
+          apikey_thunderforestcycle: '"e6cddee28b73463fae988ab5e00dc67f"',
+          widget_id: '92748',
+          lat_city: '"55.160026"', //ш
+          lon_city: '"61.402590"', //д
+          vk_bike: '"71008034"',
+          vk_overhear: '"90700964"',
+          chat_city: '"chat_chelyabinsk"'
+      }
+    })
+  ]);
+}

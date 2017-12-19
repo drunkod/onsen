@@ -2,6 +2,7 @@
   <v-ons-page :style="swipePosition">
     <custom-toolbar :style="swipeTheme" modifier="white-content">
       {{ title }}
+
       <v-ons-toolbar-button slot="right" modifier="white-content"
         @click="$store.commit('splitter/toggle'); showTip(null, 'Try dragging from right edge!')"
       >
@@ -15,14 +16,14 @@
       :tabbar-style="swipeTheme"
       :tabs="tabs"
       :index.sync="index"
-      @postchange="showTip($event, 'Tip: Try swiping pages!')"
+      @postchange="showTip($event, 'Tip: Try swiping pages!');"
     >
-      <v-ons-tab icon="ion-map"></v-ons-tab>
+      <v-ons-tab icon="ion-map, material:md-map"></v-ons-tab>
       <v-ons-tab :icon="md ? null : 'ion-home'"></v-ons-tab>
       <v-ons-tab :icon="tabs[2].icon"></v-ons-tab>
-      <v-ons-tab icon="ion-navicon, material:md-menu"></v-ons-tab>
-      <v-ons-tab icon="ion-navicon, material:md-menu"></v-ons-tab>
-      <v-ons-tab icon="ion-navicon, material:md-menu"></v-ons-tab>
+      <v-ons-tab icon="ion-chatboxes, material:md-comments"></v-ons-tab>
+      <v-ons-tab icon="ion-search, material:md-search" @click="showTip(null, 'Click Search!'); $store.commit('search/open', true);"></v-ons-tab>
+      <v-ons-tab icon="ion-navicon, material:md-menu" @click.prevent="$store.commit('splitter/toggle')"></v-ons-tab>
 
   </v-ons-tabbar>
   </v-ons-page>
@@ -33,6 +34,8 @@ import Camera from './pages/Camera.vue';
 import Home from './pages/Home.vue';
 import Forms from './pages/Forms.vue';
 import Animations from './pages/Animations.vue';
+import Chat from './pages/Chat.vue';
+import Search from './pages/Search.vue';
 
 // Just a linear interpolation formula
 const lerp = (x0, x1, t) => parseInt((1 - t) * x0 + t * x1, 10);
@@ -44,6 +47,7 @@ const purple = [103, 58, 183];
 export default {
   data () {
     return {
+      myMessage: '',
       shutUp: !this.md,
       showingTip: false,
       colors: red,
@@ -51,9 +55,9 @@ export default {
       topPosition: 0,
       tabs: [
         {
-          title: 'Camera',
+          title: 'Map',
           label: 'Map',
-          icon: 'ion-map',
+          icon: this.md ? null : 'ion-map',
           page: Camera,
           theme: red,
           style: { maxWidth: '50px' },
@@ -72,9 +76,15 @@ export default {
           theme: blue
         },
         {
-          label: 'Anim',
-          icon: this.md ? null : 'ion-film-marker',
-          page: Animations,
+          label: 'Chat',
+          icon: this.md ? null : 'ion-chatboxes',
+          page: Chat,
+          theme: purple
+        },
+        {
+          label: 'Search',
+          icon: this.md ? null : 'ion-search',
+          page: Search,
           theme: purple
         }
       ]
@@ -116,7 +126,7 @@ export default {
       }
     },
     title() {
-      return this.md ? 'Onsen UI' : this.tabs[this.index].title || this.tabs[this.index].label;
+      return this.tabs[this.index].title || this.tabs[this.index].label;
     },
     swipeTheme() {
       return this.md && {
@@ -150,4 +160,6 @@ export default {
 .page--material .tabbar--white-content__border {
   background-color: white;
 }
+
+
 </style>
