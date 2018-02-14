@@ -54,3 +54,4 @@ var shaObj = new jsSHA("SHA-1", "TEXT");
 var hash = shaObj.getHash("HEX");
 console.log(shaObj);
 console.log(hash);
+console.log("Привет");

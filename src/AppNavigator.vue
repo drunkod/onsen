@@ -8,7 +8,7 @@
 </template>
 
 <script>
-
+//боковое меню >>>>>>
 import AppSplitter from './AppSplitter.vue';
 
 export default {

@@ -1,10 +1,11 @@
 <template>
   <v-ons-page :style="swipePosition">
+    <!-- тулбар с названием таба вверху -->
     <custom-toolbar :style="swipeTheme" modifier="white-content">
       {{ title }}
-
+      <!-- кнопка вверху -->
       <v-ons-toolbar-button slot="right" modifier="white-content"
-        @click="$store.commit('splitter/toggle'); showTip(null, 'Try dragging from right edge!')"
+        @click="$store.commit('splitter/toggle'); showTip(null, 'Проведите слправа на лево пальцем!')"
       >
         <v-ons-icon icon="ion-navicon, material:md-menu"></v-ons-icon>
       </v-ons-toolbar-button>

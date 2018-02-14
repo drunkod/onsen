@@ -1,3 +1,4 @@
+<!-- боковое меню -->
 <template>
   <v-ons-page>
     <v-ons-splitter>
@@ -7,10 +8,12 @@
         :animation="md ? 'overlay' : 'reveal'"
         :open.sync="isOpen"
       >
+      <!-- в боковом сплитере меню -->
         <menu-page></menu-page>
       </v-ons-splitter-side>
 
       <v-ons-splitter-content>
+      <!-- в таббар основной >>>>>>>>>>>>>>>>> -->
         <app-tabbar></app-tabbar>
       </v-ons-splitter-content>
     </v-ons-splitter>
@@ -18,7 +21,9 @@
 </template>
 
 <script>
+//в таббар основное >>>>>>>>>>>>>
 import AppTabbar from './AppTabbar.vue';
+//в боковом сплитере меню
 import MenuPage from './pages/Menu.vue';
 
 export default {

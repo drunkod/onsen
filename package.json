@@ -23,6 +23,7 @@
     "vuex": "^2.4.0"
   },
   "devDependencies": {
+    "@storybook/vue": "^3.3.13",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-preset-env": "^1.6.1",
