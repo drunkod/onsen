@@ -19,6 +19,7 @@
       :index.sync="index"
       @postchange="showTip($event, 'Tip: Try swiping pages!');"
     >
+    <!-- табы -->
       <v-ons-tab icon="ion-map, material:md-map"></v-ons-tab>
       <v-ons-tab :icon="md ? null : 'ion-home'"></v-ons-tab>
       <v-ons-tab :icon="tabs[2].icon"></v-ons-tab>
@@ -31,7 +32,7 @@
 </template>
 
 <script>
-import Camera from './pages/Camera.vue';
+import Map from './pages/Map.vue';
 import Home from './pages/Home.vue';
 import Forms from './pages/Forms.vue';
 import Animations from './pages/Animations.vue';
@@ -59,7 +60,7 @@ export default {
           title: 'Map',
           label: 'Map',
           icon: this.md ? null : 'ion-map',
-          page: Camera,
+          page: Map,
           theme: red,
           style: { maxWidth: '50px' },
           top: -10 // Toolbar + Tabbar heights

@@ -1,3 +1,4 @@
+// import axios from 'axios';
 export default {
   modules: {
     navigator: {
@@ -79,14 +80,35 @@ export default {
           if (isOpen) {
             state.open = true;
           }
-
         },
-        boroughSearch(state, Search) {
-
+        Search(state, Search) {
+        switch (Search.source) {
+          case "borough":
             state.boroughSearch.push(Search)
-          }
+            break;
+          case "shop":
+            state.ShopSearch.push(Search)
+            break;
+          case "master":
+            state.MasterSearch.push(Search)
+            break;
+          case "park":
+            state.parkSearch.push(Search)
+            break;
+          case "onlinebike":
+            state.onlinebikeSearch.push(Search)
+            break;
+          case "eventbike":
+            state.eventbikeSearch.push(Search)
+            break;
+          case "roadbike":
+            state.roadbikeSearch.push(Search)
+            break;
+          default:
+            console.log("нет такого поиска");
+        }
 
-
+        }
       }
     },
 

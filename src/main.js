@@ -5,10 +5,11 @@ import CustomToolbar from './partials/CustomToolbar.vue';
 import storeLike from './store.js';
 import AppNavigator from './AppNavigator.vue';
 
-import Vue2Leaflet from 'vue2-leaflet';
+
 import leafletfullscreen from 'leaflet-fullscreen';
 import VueFuse from 'vue-fuse';
 import jsSHA from 'jssha';
+
 //import leafletfullscreen from '../node_modules/leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 //import Vue2Leaflet from '../node_modules/vue2-leaflet/dist/vue2-leaflet.min.js';
 //import 'https://unpkg.com/leaflet@1.2.1/dist/leaflet.js';
@@ -28,14 +29,11 @@ import '../src/assets/js/leaflet.groupedlayercontrol.js'; // Onsen UI basic CSS
 import '../src/assets/css/leaflet.groupedlayercontrol.css';
 Vue.use(Vuex);
 Vue.use(VueOnsen);
-Vue.use(Vue2Leaflet);
 Vue.use(leafletfullscreen);
 Vue.use(VueFuse);
 Vue.component('custom-toolbar', CustomToolbar); // Common toolbar
 
-Vue.component('v-map', Vue2Leaflet.Map);
-Vue.component('v-tilelayer', Vue2Leaflet.TileLayer);
-Vue.component('v-marker', Vue2Leaflet.Marker);
+
 
 
 
